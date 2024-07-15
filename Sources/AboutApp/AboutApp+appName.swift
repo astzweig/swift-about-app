@@ -34,7 +34,7 @@ extension AboutApp {
 
 	 - Returns: The app name or nil.
 	 */
-	private static func getAppNameFrom(bundle: InfoDictReaderProtocol) -> String? {
+	static func getAppNameFrom(bundle: InfoDictReaderProtocol) -> String? {
 		for dictionaryKey in ["CFBundleDisplayName", kCFBundleNameKey as String] {
 			if let appName = bundle.object(forInfoDictionaryKey: dictionaryKey) as? String {
 				return appName

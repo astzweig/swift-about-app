@@ -17,7 +17,7 @@ extension AboutApp {
 
 	 - Returns: The app version or nil.
 	 */
-	private static func getAppVersionFrom(bundle: InfoDictReaderProtocol) -> String? {
+	static func getAppVersionFrom(bundle: InfoDictReaderProtocol) -> String? {
 		let objectFor = bundle.object(forInfoDictionaryKey:)
 		var version: [String] = []
 
